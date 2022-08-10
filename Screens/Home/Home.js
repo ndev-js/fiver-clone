@@ -17,7 +17,7 @@ const Home = () => {
                   <Text style={styles.headerFont}>Nomi Rajpoot</Text>
               </View>
           </View>
-            <UserStats />          
+            <UserStats />
       </View>
   </ScrollView>
   );
