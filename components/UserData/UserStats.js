@@ -8,7 +8,8 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import Widget from './Widget';
 import Accordian from '../Accordian/Accordian';
 import Earnings from '../Earnings/Earnings';
-import EarningCard from '../Earnings/EarningCard';
+import Todo from '../ToDo/Todo';
+import Mygigs from '../Mygigs/Mygigs';
 const UserStats = () => {
   return (
     <>
@@ -50,8 +51,14 @@ const UserStats = () => {
     </View>
         <View style={styles.earnings}>
           <Earnings/>
-          <EarningCard/>
         </View>
+        <View style={styles.todo}>
+          <Todo/>
+        </View>
+        <View style={styles.gigs}>
+         <Mygigs/>
+        </View>
+
       
     </>
   );
@@ -114,7 +121,17 @@ const styles = StyleSheet.create({
   earnings:{
     paddingVertical:8,
     paddingHorizontal:5,
-    backgroundColor:'#FAF9F6'
+    backgroundColor:'#FAF9F6',
+  },
+  todo:{
+    paddingVertical:0,
+    paddingHorizontal:5,
+    backgroundColor:'#FAF9F6',
+  },
+  gigs:{
+    paddingVertical:0,
+    paddingHorizontal:5,
+    backgroundColor:'#FAF9F6',
   }
   
 });

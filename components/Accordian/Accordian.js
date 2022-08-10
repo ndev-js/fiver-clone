@@ -5,9 +5,9 @@ import Icon from 'react-native-vector-icons/AntDesign';
 import {useState} from 'react';
 const Accordian = () => {
   const [show, sethide] = useState(false);
-  const handleToggle = () =>{
-     sethide(!show)
-  }
+  const handleToggle = () => {
+    sethide(!show);
+  };
   return (
     <View>
       <View style={styles.accordflex}>
@@ -16,65 +16,75 @@ const Accordian = () => {
         </View>
         <View>
           <Text style={styles.accordColor}>
-            <Icon name="down" size={15} color="#A0A0A0" onPress={handleToggle}/>
+            <Icon
+              name="down"
+              size={15}
+              color="#A0A0A0"
+              onPress={handleToggle}
+            />
           </Text>
         </View>
       </View>
-       {
-         show &&  <><View style={styles.userProgress}>
-                  <View>
-                      <View style={styles.progFlex}>
-                          <Text style={styles.mainHeading}>Selling Seniority</Text>
-                          <Text style={styles.greenColor}>60/60</Text>
-                      </View>
-                      <View style={styles.subCont}>
-                          <Text style={styles.subhead}>
-                              Complete at least 60 days as a New Seller
-                          </Text>
-                      </View>
-                  </View>
-                  <View style={styles.horizontalLine}></View>
-              </View><View style={styles.userProgress}>
-                      <View>
-                          <View style={styles.progFlex}>
-                              <Text style={styles.mainHeading}>Orders</Text>
-                              <Text style={styles.subheadIncomplete}>4/10</Text>
-                          </View>
-                          <View style={styles.subCont}>
-                              <Text style={styles.subhead}>
-                                  Recieve and complete at least 10 orders(all time)
-                              </Text>
-                          </View>
-                      </View>
-                      <View style={styles.horizontalLine}></View>
-                  </View><View style={styles.userProgress}>
-                      <View>
-                          <View style={styles.progFlex}>
-                              <Text style={styles.mainHeading}>Earnings</Text>
-                              <Text style={styles.greenColor}>$48/400</Text>
-                          </View>
-                          <View style={styles.subCont}>
-                              <Text style={styles.subhead}>
-                                  Earn at least $400 from completed orders(all time)
-                              </Text>
-                          </View>
-                      </View>
-                      <View style={styles.horizontalLine}></View>
-                  </View><View style={styles.userProgress}>
-                      <View>
-                          <View style={styles.progFlex}>
-                              <Text style={styles.mainHeading}>Days Without Warnings</Text>
-                              <Text style={styles.greenColor}>30/30</Text>
-                          </View>
-                          <View style={styles.subCont}>
-                              <Text style={styles.subhead}>
-                                  Avoid recieving warnings for Terms of Service violations over the course of 30 days
-                              </Text>
-                          </View>
-                      </View>
-                  </View></>
-       }
-      
+      {show && (
+        <>
+          <View style={styles.userProgress}>
+            <View>
+              <View style={styles.progFlex}>
+                <Text style={styles.mainHeading}>Selling Seniority</Text>
+                <Text style={styles.greenColor}>60/60</Text>
+              </View>
+              <View style={styles.subCont}>
+                <Text style={styles.subhead}>
+                  Complete at least 60 days as a New Seller
+                </Text>
+              </View>
+            </View>
+            <View style={styles.horizontalLine}></View>
+          </View>
+          <View style={styles.userProgress}>
+            <View>
+              <View style={styles.progFlex}>
+                <Text style={styles.mainHeading}>Orders</Text>
+                <Text style={styles.subheadIncomplete}>4/10</Text>
+              </View>
+              <View style={styles.subCont}>
+                <Text style={styles.subhead}>
+                  Recieve and complete at least 10 orders(all time)
+                </Text>
+              </View>
+            </View>
+            <View style={styles.horizontalLine}></View>
+          </View>
+          <View style={styles.userProgress}>
+            <View>
+              <View style={styles.progFlex}>
+                <Text style={styles.mainHeading}>Earnings</Text>
+                <Text style={styles.greenColor}>$48/400</Text>
+              </View>
+              <View style={styles.subCont}>
+                <Text style={styles.subhead}>
+                  Earn at least $400 from completed orders(all time)
+                </Text>
+              </View>
+            </View>
+            <View style={styles.horizontalLine}></View>
+          </View>
+          <View style={styles.userProgress}>
+            <View>
+              <View style={styles.progFlex}>
+                <Text style={styles.mainHeading}>Days Without Warnings</Text>
+                <Text style={styles.greenColor}>30/30</Text>
+              </View>
+              <View style={styles.subCont}>
+                <Text style={styles.subhead}>
+                  Avoid recieving warnings for Terms of Service violations over
+                  the course of 30 days
+                </Text>
+              </View>
+            </View>
+          </View>
+        </>
+      )}
     </View>
   );
 };
