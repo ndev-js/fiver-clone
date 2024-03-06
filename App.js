@@ -52,7 +52,7 @@ const App = () => {
           color="#4bcc81"
           tabBarOptions={{
             tabBarIcon: () => {
-              <Icon name="email-outline" size={30} color="" />}
+              <Icon name="email-outline" size={30} color="#4bcc81" />}
           }}
         />
       </Tab.Navigator>
